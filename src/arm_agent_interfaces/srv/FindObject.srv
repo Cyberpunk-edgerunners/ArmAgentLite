@@ -1,0 +1,8 @@
+# Request(请求：客户端发给服务端)
+string object_name
+---
+# Response(响应：服务端算完后返回)
+bool success
+float64 x
+float64 y
+float64 z

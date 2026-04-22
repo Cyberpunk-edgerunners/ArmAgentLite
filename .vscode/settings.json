@@ -1,0 +1,26 @@
+{
+    // C++ 格式化引擎配置
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "editor.formatOnSave": true,
+    // CMake 配置
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+    // 隐藏不想看到的文件
+    "files.exclude": {
+        "**/.git": true,
+        "**/build": true,
+        "**/__pycache__": true
+    },
+    // 统一制表符为空格，防止在不同电脑上代码缩进错乱
+    // "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "ROS2.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

@@ -1,0 +1,12 @@
+# Goal (目标：要求机械臂去哪里抓)
+float64 target_x
+float64 target_y
+float64 target_z
+---
+# Result (最终结果：任务彻底结束时返回)
+bool success
+string message        # 比如 "抓取成功" 或 "碰撞检测终止"
+---
+# Feedback (实时反馈：任务执行中每秒回传)
+string current_state  # 比如 "正在规划", "正在靠近", "夹爪闭合中"
+float64 distance_left # 距离目标还剩多少米
