@@ -9,8 +9,7 @@ public:
   //构造函数
   TextUiNode() : Node("text_ui_node") {
     // 2.创建发布者(话题名：/command_text, 队列长度：10)
-    publisher_ =
-        this->create_publisher<std_msgs::msg::String>("/command_text", 10);
+    publisher_ = this->create_publisher<std_msgs::msg::String>("/command_text", 10);
 
     RCLCPP_INFO(this->get_logger(), "Text UI Node 已启动！请输入指令");
 
@@ -42,11 +41,11 @@ private:
   }
 
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
-  std::thread input_thread_; // c++11 线程对象
+  std::thread input_thread_;  // c++11 线程对象
 };
 
 // 程序的入口main函数
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   rclcpp::init(argc, argv);
   //使用智能指针创建节点实例
   auto node = std::make_shared<TextUiNode>();

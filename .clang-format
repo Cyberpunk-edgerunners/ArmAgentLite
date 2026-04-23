@@ -1,0 +1,38 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+Standard: c++17
+
+# 核心排版设置
+ColumnLimit: 100                # 行宽限制放宽到100（现代带鱼屏没必要死守80）
+TabWidth: 2
+IndentWidth: 2
+UseTab: Never
+
+# 指针和引用的对齐方式：靠近类型 (例如 int* a 而不是 int *a)
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# 类的访问修饰符缩进 (public/private)
+AccessModifierOffset: -2
+
+# 构造函数初始化列表的排版：尽量在一行，放不下再换行
+ConstructorInitializerIndentWidth: 4
+PackConstructorInitializers: BinPack
+
+# 函数参数和调用的排版：避免过度换行
+AllowAllParametersOfDeclarationOnNextLine: false
+BinPackArguments: true
+BinPackParameters: true
+
+# 命名空间不缩进
+NamespaceIndentation: None
+
+# 自动排序 include 头文件 (按字母顺序，分块)
+SortIncludes: true
+
+# 允许短代码在一行
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+---

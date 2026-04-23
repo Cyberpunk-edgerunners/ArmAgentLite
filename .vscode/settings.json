@@ -1,7 +1,14 @@
 {
     // C++ 格式化引擎配置
-    "C_Cpp.clang_format_fallbackStyle": "Google",
     "editor.formatOnSave": true,
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    // 统一制表符为空格，防止在不同电脑上代码缩进错乱
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    // C++ 智能提示
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
     // CMake 配置
     "cmake.buildDirectory": "${workspaceFolder}/build",
     "cmake.configureOnOpen": true,
@@ -11,9 +18,6 @@
         "**/build": true,
         "**/__pycache__": true
     },
-    // 统一制表符为空格，防止在不同电脑上代码缩进错乱
-    // "editor.insertSpaces": true,
-    "editor.tabSize": 4,
     "ROS2.distro": "humble",
     "python.autoComplete.extraPaths": [
         "/opt/ros/humble/lib/python3.10/site-packages",
