@@ -4,7 +4,7 @@ BasedOnStyle: Google
 Standard: c++17
 
 # 核心排版设置
-ColumnLimit: 100                # 行宽限制放宽到100（现代带鱼屏没必要死守80）
+ColumnLimit: 120                # 行宽限制放宽到100（现代带鱼屏没必要死守80）
 TabWidth: 2
 IndentWidth: 2
 UseTab: Never

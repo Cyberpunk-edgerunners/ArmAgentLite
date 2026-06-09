@@ -15,8 +15,13 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(arm_agent_interfaces REQUIRED)
 find_package(rclcpp_action REQUIRED)
+find_package(rclcpp_components REQUIRED)
+
 # 设置 C++ 标准为 C++17 (或者 20)
 set(CMAKE_CXX_STANDARD 17)
+
+# 编译器去include文件夹找.hpp头文件
+include_directories(include)
 
 # --- 节点 1: UI ---
 add_executable(text_ui_node src/text_ui_node.cpp)
@@ -24,7 +29,13 @@ ament_target_dependencies(text_ui_node rclcpp std_msgs)
 
 # --- 节点 2: NLU ---
 add_executable(nlu_node src/nlu_node.cpp)
-ament_target_dependencies(nlu_node rclcpp std_msgs)
+ament_target_dependencies(nlu_node
+ rclcpp 
+ std_msgs
+ arm_agent_interfaces
+ rclcpp_action
+ rclcpp_components
+)
 
 # --- 节点 3: 视觉 (Service Server) ---
 add_executable(vision_node src/vision_node.cpp)
